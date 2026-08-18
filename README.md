@@ -10,31 +10,6 @@
 - `flashsale`: Java 后端核心服务
 
 - `flashsale-ui`: Vue 3 前端管理与用户界面
-├── public
-    ├── favicon.svg
-    └── icons.svg
-├── src
-    ├── assets
-    │   ├── hero.png
-    │   ├── vite.svg
-    │   └── vue.svg
-    ├── components
-    │   ├── HelloWorld.vue
-    │   ├── LoginModal.vue
-    │   └── SeckillDetail.vue
-    ├── router
-    │   └── index.js
-    ├── views
-    │   ├── LoginView.vue
-    │   └── ProfileView.vue
-    ├── App.vue
-    ├── main.js
-    └── style.css
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
-└── vite.config.js
 
 ## 快速启动
 1. 导入项目根目录下的 SQL 初始化脚本至 MySQL。
