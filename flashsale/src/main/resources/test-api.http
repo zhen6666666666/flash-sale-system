@@ -1,0 +1,22 @@
+### 1. 预热商品库存到 Redis
+POST http://localhost:8080/seckill/warmup/1
+
+> {%
+    client.test("Status code is 200", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### 2. 获取隐藏秒杀路径 Token
+GET http://localhost:8080/seckill/getPath?userId=1&goodsId=1
+
+> {%
+    // 自动将返回的 pathToken 存入变量，供下一步使用
+    client.global.set("pathToken", response.body.data);
+%}
+
+### 3. 执行秒杀请求
+POST http://localhost:8080/seckill/{{pathToken}}/doSeckill?userId=1&goodsId=1&requestId=req_test_001
+
+### 4. 轮询抢购结果
+GET http://localhost:8080/seckill/result?userId=1&goodsId=1
