@@ -15,3 +15,4 @@
 2. 修改 `flashsale/src/main/resources/application.yml` 中的 MySQL 和 Redis 连接信息。
 3. 启动后端 `FlashsaleApplication.java`。
 4. 进入 `flashsale-ui` 目录，执行 `npm install` 并运行 `npm run dev`。
+5. 用户：admin 密码：123456
